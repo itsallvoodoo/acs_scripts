@@ -11,6 +11,11 @@ echo " #     #  #####   #####      #####     #    #######    ####### #    # #   
                                                                                                                
 echo ""
 echo "The purpose of this script is to export cve data from Red Hat Advanced Cluster Security into a csv file, including all deployments and images"
+echo "export ACS_ENDPOINT=central-stackrox.apps.vapo-XXX.va.gov"
+echo "export ACS_API_TOKEN=`curl -sk -u "admin:PASSWORD" "https://${ACS_ENDPOINT}/v1/apitokens/generate" -d '{"name":"token name", "role": "Admin"}' | jq -r '.token'`
+echo "export CVSS_VALUE=7"
+echo "./ace.sh test.csv"
+echo "
 
 set -e
 
