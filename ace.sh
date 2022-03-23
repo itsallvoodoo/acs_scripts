@@ -14,7 +14,7 @@ echo "The purpose of this script is to export cve data from Red Hat Advanced Clu
 
 set -e
 
-if command jq --version >/dev/null 2>$1 ; then
+if command jq --version >/dev/null 2>&1 ; then
   echo "Dependency check passed"
 else
   echo "Please install jq, a json parsing package, for your system."
